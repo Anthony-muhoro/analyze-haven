@@ -1,4 +1,4 @@
-import { Avatar, AvatarFallback, AvatarImage } from "./ui/avatar";
+import { UserButton } from "@clerk/clerk-react";
 import { SidebarTrigger } from "./ui/sidebar";
 
 export function Header() {
@@ -8,10 +8,7 @@ export function Header() {
         <SidebarTrigger />
         <h2 className="text-lg font-semibold">Decision Support System</h2>
         <div className="ml-auto">
-          <Avatar>
-            <AvatarImage src="/placeholder.svg" alt="Profile" />
-            <AvatarFallback>US</AvatarFallback>
-          </Avatar>
+          <UserButton afterSignOutUrl="/sign-in" />
         </div>
       </div>
     </header>
